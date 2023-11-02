@@ -20,14 +20,47 @@ const scissors = "scissors";
 
         return computer_choice;
     };
-/* The user also makes its choice among the three
-    Ask the user for his choice */
 
-/* If Rock meets Paper,
-    Paper wins */
+// function to check whether who wins a round...
+    const game_winner = (player, computer) => {
+        /* The user also makes its choice among the three
+        Ask the user for his choice */
+        const input = prompt("Type in your choice");
+        player = input.toLowerCase()
+        computer = getComputerChoice();
+        let winner;
+        switch(true) {
+            /* If rock meets Paper
+            Paper wins */
+            case player == "rock" && computer == "paper":
+                winner = "You lose! Paper beats Rock"
+                break;
+            case player == "paper" && computer == "rock":
+                winner = "You win! Paper beats Rock"
+                break;
+            /* If Rock meets Scissors,
+            Rock wins */
+            case player == "rock" && computer == "scissors":
+                winner = "You win! Rock beats Scissors"
+                break;
+            case player == "scissors" && computer == "rock":
+                winner = "You lose! Rock beats Scissors"
+                break;
+            /* If Paper meets Scissors,
+            Scissors wins */
+            case player == "paper" && computer == "scissors":
+                winner = "You lose! Scissors beats paper"
+                break;
+            case player == "scissors" && computer == "paper":
+                winner = "You win! Scissors beats paper"
+                break;
+            // If same meet
+            default:
+                winner = "It's a tie!"
+        }
+        
+        return winner;
+    }
 
-/* If Rock meets Scissors,
-    Rock wins */
 
-/* If Paper meets Scissors,
-    Scissors wins */
+    
