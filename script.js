@@ -62,5 +62,33 @@ const scissors = "scissors";
         return winner;
     }
 
+// function to create a five round loop 
+    const game = () => {
+        let player_score = 0;
+        let computer_score = 0;
+        console.log(`WELCOME TO THE GREAT OLD GAME`)
+        console.log(`THE ROCK PAPER SCISSORS GAME`)
+        for(let index = 1; index < 6; index += 1) {
+            console.log(`ROUND `, index);
+            let round_result = game_winner();
+            if (round_result.charAt(4) == "w"){
+                player_score += 1;
+            }
+            else if (round_result.charAt(4) == "l") {
+                computer_score +=1
+            }
+            console.log(round_result);
+            console.log(`${player_score} : ${computer_score}`)
+        }
 
+        if (computer_score > player_score) {
+            console.log("GAME OVER, YOU LOSE!")
+        }
+        else if (computer_score == player_score) {
+            console.log("GAME OVER, YOU TIED! PLAY AGAIN")
+        }
+        else {
+            console.log(`GAME OVER, YOU WIN!`)
+        }
+    }
     
