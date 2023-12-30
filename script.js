@@ -21,12 +21,19 @@ const scissors = "scissors";
         return computer_choice;
     };
 
+    const rock_btn = document.querySelector('#rock-button');
+    const paper_btn = document.querySelector('#paper-button');
+    const scissors_btn = document.querySelector('#scissors-button');
+    let user_score = document.querySelector('#user-score div');
+    let ai_score = document.querySelector('#ai-score div')
+    let rounds = document.querySelector('#rounds');
+
+
 // function to check whether who wins a round...
     const game_winner = (player, computer) => {
         /* The user also makes its choice among the three
         Ask the user for his choice */
-        const input = prompt("Type in your choice");
-        player = input.toLowerCase()
+        
         computer = getComputerChoice();
         let winner;
         switch(true) {
@@ -58,23 +65,24 @@ const scissors = "scissors";
             default:
                 winner = "It's a tie!"
         }
-        
+        rounds.textContent = winner;
         return winner;
     }
 
-// function to create a five round loop 
-    const game = () => {
+
+
+
+
+    // function to create a five round loop 
+    const game = () => {     
         let player_score = 0;
         let computer_score = 0;
-        console.log(`WELCOME TO THE GREAT OLD GAME`)
-        console.log(`THE ROCK PAPER SCISSORS GAME`)
-        for(let index = 1; index < 6; index += 1) {
-            console.log(`ROUND `, index);
-            let round_result = game_winner();
+        user_score.textContent = player_score;
+        ai_score.textContent = computer_score;
             if (round_result.charAt(4) == "w"){
                 player_score += 1;
             }
-            else if (round_result.charAt(4) == "l") {
+            else if (round_result.charAt(4) == "l") { 
                 computer_score +=1
             }
             console.log(round_result);
@@ -90,5 +98,4 @@ const scissors = "scissors";
         else {
             console.log(`GAME OVER, YOU WIN!`)
         }
-    }
-    
+

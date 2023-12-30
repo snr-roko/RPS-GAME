@@ -15,9 +15,36 @@
         <meta property="og:locale" content="en_US">
     </head>
     <body>
-        <header></header>
+        <header>
+            <img src="" alt="">
+            <h3>RPS GAME</h3>
+        </header>
         <nav></nav>
         <main>
+            <div class="container" id="container">    
+                <div class="scores" id="scores">
+                    <div class="user-score" id="user-score">
+                        <h3>USER</h3>
+                        <div></div>
+                    </div>
+                    <h3>BATTLE</h3>
+                    <div class="ai-score" id="ai-score">
+                        <h3>AI</h3>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="choices" id="choices">
+                    <h5>Think, Think, Think</h5>
+                    <p>Oww; Its Chance</p>
+                    <div class="choices-button" id="choices-button">
+                        <button class="rock" id="rock-button">ROCK</button>
+                        <button class="paper" id="paper-button">PAPER</button>
+                        <button class="scissors" id="scissors-button">SCISSORS</button>
+                    </div>                
+                </div>
+                <div class="rounds" id="rounds"></div>
+                <div class="game" id="game"></div>
+            </div>                            
         </main>
         <footer>&copy; 2023 Snr-Roko</footer>
         <script src="script.js">
