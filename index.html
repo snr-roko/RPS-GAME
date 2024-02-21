@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="mr-roko">
         <title>RPS GAME</title>
+        <link rel="stylesheet" href="style.css">
 
         <meta property="og:title" content="Rock Paper Scissors">
         <meta property="og:type" content="website">
@@ -21,30 +22,31 @@
         </header>
         <nav></nav>
         <main>
-            <div class="container" id="container">    
-                <div class="scores" id="scores">
-                    <div class="user-score" id="user-score">
-                        <h3>USER</h3>
-                        <div></div>
-                    </div>
-                    <h3>BATTLE</h3>
-                    <div class="ai-score" id="ai-score">
-                        <h3>AI</h3>
-                        <div></div>
-                    </div>
+            <p class="to-end">You win with 5 points, Its that easy!!!!!</p>
+            <div class="scores" id="scores">
+                <div class="user-score" id="user-score">
+                    <h3>USER</h3>
+                    <div>0</div>
                 </div>
-                <div class="choices" id="choices">
-                    <h5>Think, Think, Think</h5>
-                    <p>Oww; Its Chance</p>
-                    <div class="choices-button" id="choices-button">
-                        <button class="rock" id="rock-button">ROCK</button>
-                        <button class="paper" id="paper-button">PAPER</button>
-                        <button class="scissors" id="scissors-button">SCISSORS</button>
-                    </div>                
+                <h3>BATTLE</h3>
+                <div class="ai-score" id="ai-score">
+                    <h3>AI</h3>
+                    <div>0</div>
                 </div>
-                <div class="rounds" id="rounds"></div>
-                <div class="game" id="game"></div>
-            </div>                            
+            </div>
+            <div class="choices" id="choices">
+                <h2>Think, Think, Think</h2>
+                <p>Oww SORRY; Its Chance</p>
+                <div class="choices-button" id="choices-button">
+                    <button class="rock" id="rock-button"><img src="Images/rock-svgrepo-com.svg" alt="Rock  button"></button>
+                    <button class="paper" id="paper-button"><img src="Images/paper-roll-svgrepo-com.svg" alt="Paper button"></button>
+                    <button class="scissors" id="scissors-button"><img src="Images/scissors-svgrepo-com.svg" alt="Scissors button"></button>
+                </div>                
+            </div>
+            <div class="end-round" id="end-round"></div>
+            <div class="reload" id="reload"></div>
+            <div class="game" id="game"></div>     
+            <div class="remarks" id="remarks"></div>                       
         </main>
         <footer>&copy; 2023 Snr-Roko</footer>
         <script src="script.js">
